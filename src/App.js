@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import necessary modules
 import Header from './component/Header'
 import Home from './pages/Home'
+import './App.css'; // Import the CSS file
 
 const App = () => {
   return (

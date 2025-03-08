@@ -1,3 +1,301 @@
-.head-logo{
+/* General Styles */
+.head-logo {
     width: 200px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --btn-width-100: 100px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 8px 15px;
+    list-style: none;
+    display: flex;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    align-items: center;
+  }
+  
+  nav ul li {
+    padding: 3px;
+  }
+  
+  nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  nav ul li #fb {
+    background: #0b84ed;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  nav ul li #search_btn {
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.068);
+    padding: 8px;
+    color: #888;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  nav ul li#space1 {
+    flex: 1;
+  }
+  
+  nav ul li#space2 {
+    flex: 1;
+  }
+  
+  nav ul li a {
+    height: 40px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(158, 158, 158);
+    transition: 0.5s;
+  }
+  
+  nav ul li #btn_plus,
+  nav ul li #btn_msg,
+  nav ul li #btn_bell,
+  nav ul li #btn_profile {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #444;
+    background: rgba(0, 0, 0, 0.068);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  nav ul li:hover #home,
+  nav ul li:hover #group,
+  nav ul li:hover #tv,
+  nav ul li:hover #friend {
+    background: rgba(0, 0, 0, 0.138);
+    color: #444;
+    border-radius: 5px;
+  }
+  
+  .active {
+    color: #0b84ed !important;
+  }
+  
+  .tooltip {
+    position: relative;
+  }
+  
+  .tooltip::after {
+    content: attr(data-tooltip);
+    height: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    bottom: -150%;
+    padding: 5px 12px;
+    line-height: 30px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .tooltip:hover::after {
+    opacity: 1;
+  }
+  
+  nav ul li #btn_profile::after {
+    margin-left: -20px;
+  }
+  
+  /* Mobile view */
+  @media screen and (max-width: 700px) {
+    nav ul li#space1,
+    nav ul li#space2 {
+      display: none;
+    }
+  
+    nav ul {
+      min-width: 100%;
+      padding: 8px 12px;
+    }
+  
+    :root {
+      --btn-width-100: 60px;
+    }
+  
+    nav ul li a {
+      font-size: 1.2rem;
+    }
+  
+    nav ul li {
+      padding: 8px 10px;
+    }
+  
+    .head-logo {
+      width: 150px;
+    }
+  
+    .search-form {
+      display: flex;
+      width: 100%;
+      margin-top: 8px;
+    }
+  
+    .search-form input {
+      width: 80%;
+      padding: 5px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .search-form button {
+      width: 20%;
+      background-color: #0b84ed;
+      color: white;
+      border: none;
+      padding: 5px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .sell-button{
+    height: 45px;
+    width: 200px;
+    border-radius: 20px;
+  }
+  .sell-button:hover{
+    --tw-border-opacity: 1;
+    border-color: rgb(0 89 168 / var(--tw-border-opacity));
+    background-color: #fff;
+    color: rgb(0 89 168 / var(--tw-border-opacity));
+
+    
+  }
+  .signin-button{
+    height: 45px;
+    width: 110px;
+    border-radius: 20px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  }
+  .signin-button:hover{
+    
+    background-color: #fff;
+    color: rgb(51 51 51 / var(--tw-bg-opacity));;
+  }
+ 
+.navbar-actions{
+    display: flex;
+    align-items: center;
 }
+
+.navbar-form{
+    position: relative;
+    margin-right: 50px;
+}
+
+.navbar-form-search{
+    background: var(--oxford-blue);
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 15px;
+    color: var(--off-white);
+    font-size: var(--font-size-small);
+    font-weight: var(--fw5);
+}
+
+.navbar-form-btn{
+    background: var(--oxford-blue);
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 10px;
+}
+
+.navbar-form-btn ion-icon, .navbar-search-btn ion-icon{
+    font-size: 20px;
+    color: var(--light-azure);
+    --ionicon-stroke-width: 50px;
+}
+
+    .navbar-form-btn:hover ion-icon, .navbar-form-search::placeholder { color: var(--off-white);}
+
+.navbar-form-close, .navbar-search-btn{ display: none;}
+
+
+/* Container holding both the icon and the wishlist */
+.wishlist-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Initial state: Wishlist is hidden */
+  .wishlist-side {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 2px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 25px; 
+    border-radius: 6px;
+    font-size: 13px;
+    left: 18px;
+    top: 26px;
+}
+  
+  /* Show the wishlist when hovering over the icon */
+  .wishlist-container:hover .wishlist-side {
+    display: block;
+  }
+  
+  /* Icon styles */
+  .wishlist-icon {
+    /* font-size: 30px; */
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Optional: Adds a smooth animation */
+  }
+  
+  /* Optional: Add hover effect to the icon */
+  .wishlist-icon:hover {
+    transform: scale(1.1); /* Slightly increase the size of the icon on hover */
+  }
+  
